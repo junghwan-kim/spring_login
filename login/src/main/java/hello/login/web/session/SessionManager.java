@@ -17,7 +17,7 @@ public class SessionManager {
 	
 	public static final String SESSION_COOKIE_NAME = "mySessionId";
 	
-	private Map<String, Object> sessionStore = new ConcurrentHashMap<>();
+	private Map<String, Object> sessionStore = new ConcurrentHashMap<>(); //동시성 이슈시 ConcurrentHashMap 이거 써야함
 	
 	//세션생성
 	public void createSession(Object value, HttpServletResponse response) {
